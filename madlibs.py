@@ -28,6 +28,36 @@ def greet_person():
 
     return render_template("compliment.html", person=player, compliment=compliment)
 
+@app.route('/game')
+def show_game_form():
+    response = request.args.get("game")
+
+    # if user selects 'yes', render game
+    if response == 'yes':
+        print "it works!"
+        return render_template("game.html")
+
+    # if user selcts 'no', render goodbye 
+    if response == 'no':
+        return render_template("goodbye.html")
+
+    # FIXME : what if they picked NEITHER ?!
+
+@app.route('/madlib')
+def show_madlib():
+    person = request.args.get("person")
+    noun = request.args.get("noun") 
+    color = request.args.get("color")
+    adjective = request.args.get("adjective")
+
+    return render_template(
+        "madlib.html", 
+        person=person, 
+        noun=noun, 
+        color=color, 
+        adjective=adjective,
+        # all_madlib_args = request.args (another way to access args)
+        )
 
 if __name__ == '__main__':
     # debug=True gives us error messages in the browser and also "reloads" our web app
