@@ -1,0 +1,13 @@
+#goodbye {
+    text-align: center;
+}
+
+#kitten {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.standardFont {
+    font-family: Arial;
+}
