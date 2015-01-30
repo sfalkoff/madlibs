@@ -4,6 +4,7 @@ from flask import Flask, render_template, request
 
 # "__name__" is a special Python variable for the name of the current module; Flask wants
 # to know this to know what any imported things are relative to.
+
 app = Flask(__name__)
 
 # route to handle the landing page of a website.
@@ -11,7 +12,7 @@ app = Flask(__name__)
 def start_here():
     return "Hi! This is the home page."
 
-# route to display a simple web page
+# route to display a simple web page.
 @app.route('/hello')
 def say_hello():
     return render_template("hello.html")
@@ -32,12 +33,11 @@ def greet_person():
 def show_game_form():
     response = request.args.get("game")
 
-    # if user selects 'yes', render game
+    # if user selects 'yes', render game.
     if response == 'yes':
-        print "it works!"
         return render_template("game.html")
 
-    # if user selcts 'no', render goodbye 
+    # if user selcts 'no', render goodbye. 
     if response == 'no':
         return render_template("goodbye.html")
 
@@ -47,22 +47,24 @@ def show_madlib():
     noun = request.args.get("noun") 
     color = request.args.get("color")
     adjective = request.args.get("adjective")
+    verb = request.args.get("verb")
 
-    madlib_list = ["madlib.html","madlib2.html"]
+
+    madlib_list = ["madlib.html", "madlib2.html", "madlib3.html", "madlib4.html"]
     random_madlib = choice(madlib_list)
-    # print random_madlib
-
+ 
     return render_template(
         random_madlib, 
         person=person, 
         noun=noun, 
         color=color, 
         adjective=adjective,
+        verb=verb,
         # all_madlib_args = request.args (another way to access args)
         )
 
 
 if __name__ == '__main__':
-    # debug=True gives us error messages in the browser and also "reloads" our web app
-    # if we change the code.
+    # debug=True gives error messages in the browser and also "reloads" the web app
+    # if the code is changed.
     app.run(debug=True)
