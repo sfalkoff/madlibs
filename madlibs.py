@@ -1,4 +1,4 @@
-from random import choice
+from random import choice 
 from flask import Flask, render_template, request
 
 
@@ -48,14 +48,19 @@ def show_madlib():
     color = request.args.get("color")
     adjective = request.args.get("adjective")
 
+    madlib_list = ["madlib.html","madlib2.html"]
+    random_madlib = choice(madlib_list)
+    # print random_madlib
+
     return render_template(
-        "madlib.html", 
+        random_madlib, 
         person=person, 
         noun=noun, 
         color=color, 
         adjective=adjective,
         # all_madlib_args = request.args (another way to access args)
         )
+
 
 if __name__ == '__main__':
     # debug=True gives us error messages in the browser and also "reloads" our web app
