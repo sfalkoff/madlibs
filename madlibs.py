@@ -41,8 +41,6 @@ def show_game_form():
     if response == 'no':
         return render_template("goodbye.html")
 
-    # FIXME : what if they picked NEITHER ?!
-
 @app.route('/madlib')
 def show_madlib():
     person = request.args.get("person")
