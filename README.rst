@@ -1,8 +1,8 @@
 Clone This Repo
 ---------------
-
-https://github.com/sfalkoff/madlibs.git
-
+     ```
+     https://github.com/sfalkoff/madlibs.git
+     ```
 Setup
 -----
 
@@ -21,14 +21,15 @@ Setup
 
 Running the Application
 -----------------------
-
+     ```
      python madlibs.py
-
+     ```
 
 Viewing the Application
 -----------------------
-
-Visit http://localhost:5000/
+     ```
+     http://localhost:5000/
+     ```
 
 Enjoy!
 
