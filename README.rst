@@ -25,7 +25,7 @@ Running the Application
      python madlibs.py
 
 
-Viewing the Application
+Play the Game
 -----------------------
 
      http://localhost:5000/
