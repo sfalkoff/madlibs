@@ -10,7 +10,7 @@ Setup
 
      virtualenv env
 
-2. And start using your virtual environment::
+2. Start using your virtual environment::
 
      source env/bin/activate
 
