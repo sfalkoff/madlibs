@@ -1,5 +1,3 @@
-To play this madlibs game:
-
 Clone This Repo
 ---------------
 
