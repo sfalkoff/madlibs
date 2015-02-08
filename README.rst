@@ -22,12 +22,6 @@ Setup
 Running the Application
 -----------------------
 
-1. Start using your virtual environment::
-
-     source env/bin/activate
-
-2. Run the application::
-
      python madlibs.py
 
 
